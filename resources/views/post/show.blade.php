@@ -34,7 +34,7 @@
             <div class="panel-body">
               <article class="">
                 <div class="body">
-                  {{ $comment->body }}
+                  {!! $comment->body !!}
                 </div>
               </article>
             </div>
@@ -50,7 +50,7 @@
           <form class="" action="{{ route('addcomment', $post->id) }}" method="POST">
             {{ csrf_field() }}
             <div class="form-group">
-              <textarea name="body" class="form-control" placeholder="Have something to say?" rows="8" cols="80"></textarea>
+              <textarea name="body" id="post_comment_body" class="form-control" placeholder="Have something to say?" rows="8" cols="80"></textarea>
             </div>
             <button type="submit" class="btn btn-default" name="button">Post</button>
           </form>
@@ -61,4 +61,12 @@
     @endif
 
   {{-- </div> --}}
+@endsection
+
+
+@section('js')
+  <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+  <script>
+      CKEDITOR.replace( 'post_comment_body' );
+  </script>
 @endsection

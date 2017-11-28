@@ -16,7 +16,7 @@
                 Post at <small>{{ $post->created_at }}</small>
                 <h3><a href="/blog/{{ $post->id }}">{{ $post->title }}</a></h3>
                 <div class="body">
-                  {{ $post->body }}
+                  {!! $post->body !!}
                 </div>
               </article>
               <hr>
