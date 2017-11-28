@@ -168,6 +168,7 @@ return [
          * Package Service Providers...
          */
         Laravel\Dusk\DuskServiceProvider::class,
+        Unisharp\Ckeditor\ServiceProvider::class,
         /*
          * Application Service Providers...
          */

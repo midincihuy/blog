@@ -19,7 +19,7 @@
               </div>
               <div class="form-group">
                 <label for="body">Body</label>
-                <textarea name="body" class="form-control" rows="8" cols="80"></textarea>
+                <textarea name="body" id="post_body" class="form-control" rows="8" cols="80"></textarea>
               </div>
               <input type="submit" class="btn btn-block btn-primary">
             </form>
@@ -28,4 +28,11 @@
       {{-- </div> --}}
     {{-- </div> --}}
   {{-- </div> --}}
+@endsection
+
+@section('js')
+  <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+  <script>
+      CKEDITOR.replace( 'post_body' );
+  </script>
 @endsection

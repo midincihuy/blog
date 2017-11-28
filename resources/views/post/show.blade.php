@@ -14,7 +14,7 @@
           <div class="panel-body">
             <article class="">
               <div class="body">
-                {{ $post->body }}
+                {!! $post->body !!}
               </div>
             </article>
           </div>
