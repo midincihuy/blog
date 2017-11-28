@@ -21,7 +21,7 @@
               </article>
               <hr>
             @endforeach
-
+            {{ $posts->links() }}
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ class PostsController extends Controller
   public function index(Post $post)
   {
     // return view('home');
-    $posts = $post::latest()->get();
+    $posts = $post::latest()->paginate(2);
     return view('post.index')->with(['posts' => $posts]);
   }
 
