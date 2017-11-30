@@ -34,3 +34,9 @@ Route::post('/blog/{post}/comment', 'CommentController@store')->name('addcomment
 Route::post('/post', 'PostsController@store');
 
 Route::view('/admin', 'admin');
+
+
+Route::post('/user', 'UserController@store');
+Route::get('/user/paginate', 'UserController@paginate');
+Route::get('/user/{id}', 'UserController@show');
+Route::get('/user', 'UserController@view');
